@@ -34,5 +34,8 @@ public class BurgerExample {
 
         Burger vegBurger = BurgerFactory.createBurger("veg");
         vegBurger.prepare();
+
+        Burger unknownBurger = BurgerFactory.createBurger("unknown");
+        unknownBurger.prepare();
     }
 }
