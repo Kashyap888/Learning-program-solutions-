@@ -1,0 +1,29 @@
+1.Explain Big O notation and how it helps in analyzing algorithms ?
+Ans:
+    Big O Notation:
+    Big O notation is used to describe the time or space complexity of an algorithm in terms of input size n.
+
+    It shows the worst-case scenario to give an upper bound on running time.
+
+2.Describe the best, average, and worst-case scenarios for search operations ?
+Ans:
+    Search Type	    Best Case	            Average Case	        Worst Case
+    Linear Search	O(1) – first item	    O(n/2) → O(n)	        O(n) – last item or not found
+    Binary Search	O(1) – middle item	    O(log n)	            O(log n) – divide and conquer
+
+3.Compare the time complexity of linear and binary search algorithms ?
+Ans:
+    Time Complexity
+    Algorithm	    Time Complexity	    Sorted Required
+    Linear Search	O(n)	               No
+    Binary Search	O(log n)	           Yes
+
+4.Discuss which algorithm is more suitable for your platform and why ?
+Ans:
+    In an e-commerce platform, binary search is generally more suitable than linear search—especially when dealing with large amounts of products.
+That’s because binary search is much faster. While linear search checks every product one by one (which can be slow if there are thousands of items), binary search quickly narrows down the results by dividing the list in half each time. This makes it ideal for quick searches like when a user types in a product name or searches for something specific.
+However, binary search only works if the data is sorted (like by product name). So we either need to keep the list sorted or use a different approach like hash maps or search indexes for even faster results.
+In short:
+Use linear search for small product lists or simple filters.
+Use binary search (or more advanced data structures) for faster performance on larger platforms.
+So for a real-world e-commerce site, binary search (or better) is the preferred choice to give users quick and responsive search results.
