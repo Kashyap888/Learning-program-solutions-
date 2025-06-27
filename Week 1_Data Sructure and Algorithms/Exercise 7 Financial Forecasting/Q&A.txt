@@ -1,0 +1,30 @@
+1.Explain the concept of recursion and how it can simplify certain problems ?
+Ans:
+    Recursion is a concept where a function calls itself to solve a smaller version of the original problem.
+    Instead of solving everything at once, the problem is broken down step-by-step until a simple base case is reached. Then, the solution builds back up from there.
+
+    In financial forecasting, each year’s value often depends on the previous year’s value and a growth rate. This makes recursion a natural fit.
+
+    For example:
+    If you know the value this year, next year’s value is:
+    nextValue = thisYearValue × (1 + growthRate)
+    So, to find the value in 5 years, you could think like this:
+    Year 5 = Year 4 × (1 + rate)
+    Year 4 = Year 3 × (1 + rate)
+    ...and so on until Year 0.
+    By using recursion, this repeated pattern can be coded elegantly and simply, without needing complex loops.
+
+Analysis:
+2.Discuss the time complexity of your recursive algorithm?
+Ans:
+    Time Complexity:
+    Recursive method calls itself once for each year → O(n) time
+    No repeated subproblems, so it's efficient for small values of n.
+
+3.Explain how to optimize the recursive solution to avoid excessive computation ?
+Ans:
+     Memoization (caching results) or converting to an iterative solution is better.
+
+Final Thoughts:
+Recursion makes code simpler and elegant for problems like compound growth.
+But for large datasets or long timeframes, iterative or memoized solutions are more efficient.
