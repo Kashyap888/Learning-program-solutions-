@@ -1,14 +1,15 @@
 import org.example.Calculator;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 public class CalculatorTest {
     private Calculator calculator;
 
     // Setup method
-    @Before
+    @BeforeEach
     public void setUp() {
         // Arrange
         calculator = new Calculator();
@@ -16,7 +17,7 @@ public class CalculatorTest {
     }
 
     // Teardown method
-    @After
+    @AfterEach
     public void tearDown() {
         calculator = null;
         System.out.println("Teardown completed.");
@@ -42,4 +43,3 @@ public class CalculatorTest {
         assertEquals(6, result);
     }
 }
-
