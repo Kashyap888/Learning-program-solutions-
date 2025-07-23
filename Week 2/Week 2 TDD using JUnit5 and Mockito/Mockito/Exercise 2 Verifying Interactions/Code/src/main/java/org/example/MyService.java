@@ -1,7 +1,5 @@
 package org.example;
 
-import org.example.ExternalApi;
-
 public class MyService {
     private ExternalApi externalApi;
 

@@ -1,21 +1,25 @@
+package org.example;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 import static org.mockito.Mockito.*;
 
-import org.example.ExternalApi;
-import org.example.MyService;
-import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
+public class MyServiceTest {
 
-public class Myservicetest {
+    private ExternalApi externalApi;
+    private MyService myService;
+
+    @BeforeEach
+    public void setUp() {
+        externalApi = mock(ExternalApi.class); // Create mock
+        myService = new MyService(externalApi); // Inject mock
+    }
 
     @Test
-    public void testVerifyInteraction() {
-
-        ExternalApi mockApi = Mockito.mock(ExternalApi.class);
-        MyService service = new MyService(mockApi);
-        service.fetchData();
-
-
-        verify(mockApi).getData();
+    public void testFetchData_callsExternalApiGetData() {
+        myService.fetchData();
+        verify(externalApi, times(1)).getData(); // Verify interaction
     }
 }
 
