@@ -1,0 +1,23 @@
+.app-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.button-group button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+hr {
+  margin: 15px 0;
+}
